@@ -22,7 +22,8 @@ my $oligo3 = '';
 $lic5 = lc($lic5);
 $lic3 = lc($lic3);
 
-print "\n\n\nHello.\n\n";
+print "\n\n\nWeb: bioinf.dormanm.com, Git: github.com/bioinf-dormanm-com\n\n";
+print "\n\n\nLam_RED version 0.0.4.\n\n";
 print "Lam_RED computes primer sequences to disrupt a sequence of DNA by double crossover events (Datsenko and Wanner 2000). \n";
 print "\nThe program relies on a genome sequence file in the directory, input.fa. Read the README.\n";
 print "Please be ready to supply the following information:\n\n";
@@ -41,15 +42,15 @@ my $dna = ''; # will be moving the sequence here.
 if ($sequence =~ /\.fa/) {
 	open (INPUT, $sequence);
 	while (my $input = <INPUT>) {
-	
+
     	# check if it is a '>'
     	if ($input =~ /^>/) {
     		# we have a header line
     		# skip it
     		next;
-    	
+
     	} else {
-    
+
        	 # append to DNA string
 			chomp $input;
 			$dna .= uc $input;
@@ -59,7 +60,7 @@ if ($sequence =~ /\.fa/) {
 } else {
 	chomp $sequence;
 	$dna = uc $sequence;
-} 
+}
 
 my $dna2 = $dna;
 
@@ -100,7 +101,7 @@ if ($strand_input eq '-') {
 } else {
 	print " on the forward strand.\n";
 	}
-	
+
 
 $geneseq = substr $dna, $coord1 - 1, $genelen;
 
@@ -156,9 +157,8 @@ print $prom20down;
 $oligo5 = $prom20up . $lic5;
 $oligo3 = $prom20down. $lic3;
 
-print "\n\n And so your knockout oligo sequences are:\n";
+print "\n\nAnd so your knockout oligo sequences are:\n";
 print "Forward primer: $oligo5\n";
 print "Reverse primer: $oligo3\n";
 
 print "\nHave a nice day!\n";
-
