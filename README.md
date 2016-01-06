@@ -2,11 +2,11 @@
 Current revision 0.0.4
 
 Lam_RED software version 0.0.4
-Matthew J. Dorman
-dormanm.com
-12/10/15
+bioinf.dormanm.com
+06/01/16
 
 Changelog: 
+06/01/16 Edit readme.
 12/10/15 Version 0.0.4. Fixed so that 40 bp +/- site to mutagenise were used for primer. Also tidied up script. 
 
 INTRODUCTION~
@@ -37,6 +37,4 @@ Once you supply these three facts, Lam_RED will generate two oligo sequences for
 
 The lowercase regions in your mutagenesis primers are the 20-mer homology arms to amplify the pKD3 or pKD4 disruption cassette. If you want to use a different gene replacement cassette, you are more than welcome to edit the script yourself to alter these homology sequences. 
 
-If you have any problems, please email matt [at] dormanm [dot] com. 
-
-12/10/15
+06/01/16
